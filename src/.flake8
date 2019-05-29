@@ -4,3 +4,8 @@ exclude =
  __pycache__
  manage.py
  settings
+
+ignore = F403
+    F401
+    E221
+    E501
