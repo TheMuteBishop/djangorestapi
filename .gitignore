@@ -99,6 +99,7 @@ venv.bak/
 .vscode/
 # mkdocs documentation
 /site
+<<<<<<< HEAD
 /static/static-only
 media
 images
@@ -108,3 +109,8 @@ images
 
 # gecko griver
 geckodriver.exe
+=======
+
+# mypy
+.mypy_cache/
+>>>>>>> 419f3ed10e04b765dfaf305c54ccc606d8177d54
