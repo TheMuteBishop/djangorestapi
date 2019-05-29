@@ -1,0 +1,8 @@
+-- stop all container
+docker container stop $(docker container ls -aq)
+
+-- remove all containers
+docker container rm $(docker container ls -aq)
+
+-- run test 
+docker-compose run api sh -c "python manage.py test"
