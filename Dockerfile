@@ -7,10 +7,12 @@ ENV PYTHONUNBUFFERED 1
 #copy requirments.txt from local to container
 COPY ./requirments.txt /requirments.txt 
 
-#inatall dependencies
-RUN apk add --no-cache jpeg-dev zlib-dev
-RUN apk add --no-cache postgresql-dev
+#install dependencies
+RUN apk add --update --no-cache postgresql-client
+RUN apk add --update --no-cache --virtual .dev-dependencies \
+        gcc libc-dev linux-headers postgresql-dev
 RUN pip install -r /requirments.txt
+RUN apk del .dev-dependencies
 
 RUN mkdir /app
 WORKDIR /app

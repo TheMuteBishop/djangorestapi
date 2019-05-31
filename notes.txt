@@ -4,5 +4,8 @@ docker container stop $(docker container ls -aq)
 -- remove all containers
 docker container rm $(docker container ls -aq)
 
+--remobe image by id 
+docker rmi <IMAGE ID>
+
 -- run test 
 docker-compose run api sh -c "python manage.py test"
